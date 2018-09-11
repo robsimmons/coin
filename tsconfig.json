@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "moduleResolution": "node",
+        "declaration": true,
+        "outDir": "./lib/",
+        "module": "commonjs",
+        "sourceMap": true,
+        "jsx": "react",
+
+        "strict": true,
+        "allowUnreachableCode": false,
+        "allowUnusedLabels": false,
+        "noImplicitReturns": true,
+        "noUnusedLocals": true
+    },
+    "paths": {
+        "@calculemus/*": ["../node_modules/@calculemus/*"]
+    },
+    "include": ["./src/**/*.t*"]
+}
