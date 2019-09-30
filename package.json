@@ -7,8 +7,8 @@
     "author": "Calculemus LLC",
     "license": "ISC",
     "devDependencies": {
-        "@calculemus/aconsole": "../aconsole",
-        "@calculemus/jaco": "../../jaco",
+        "@calculemus/aconsole": "0.0.2",
+        "@calculemus/jaco": "0.0.18",
         "@types/codemirror": "0.0.60",
         "@types/react": "^16.4.13",
         "@types/react-dom": "^16.0.7",

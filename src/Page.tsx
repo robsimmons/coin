@@ -10,7 +10,7 @@ class Page extends React.Component<{}, State> {
     render() {
         return [
             <header key="head">
-                <h1>C0 Interpreter</h1>
+                <h1>Interpreter for C0</h1>
             </header>,
             <main key="main">
                 <CoinApp />

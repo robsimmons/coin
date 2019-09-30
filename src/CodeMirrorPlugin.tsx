@@ -33,7 +33,7 @@ export class CodeMirrorPlugin extends React.Component<Props> {
 
     private updateMe(doc: CodeMirror.Doc, text: string) {
         try {
-            const program = parseProgram("CNext", text);
+            const program = parseProgram("C1", text);
             const genv = checkProgramFragment([], program);
             this.props.refresh(genv, program);
         } catch (err) {
@@ -72,7 +72,7 @@ export class CodeMirrorPlugin extends React.Component<Props> {
             console.error("Could not render element");
         } else {
             const editor = CodeMirror(this.el, {
-                value: "int seven() {\n  return 7;\n}",
+                value: "int FIB(int n) {\n  return n <= 1 ? n : FIB(n-1) + FIB(n-2);\n}",
                 lineNumbers: true
             });
             const doc = editor.getDoc();

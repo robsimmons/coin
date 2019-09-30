@@ -72,13 +72,13 @@ class CoinConsole extends React.Component<{ readonly initial: State }, { genv: G
                     }
 
                     const stmbytecode = compileStatement({ tag: "BlockStatement", body: stms }, true)
-                    executeInstructions(this.state.bytecode, this.state.locals, stmbytecode, 5000000)
+                    executeInstructions(this.state.bytecode, this.state.locals, stmbytecode, 50000000)
                         
                     if (exp === null) {
                         return [];
                     } else {
                         const expbytecode = compileExpression(exp);
-                        const result = executeInstructions(this.state.bytecode, this.state.locals, expbytecode, 5000000);
+                        const result = executeInstructions(this.state.bytecode, this.state.locals, expbytecode, 50000000);
                         const value = valueToString(result);
                         return value === null ? [] : [{tag: "return", msg: `${prefix}${valueToString(result)}`}]
                     }
